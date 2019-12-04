@@ -1,7 +1,7 @@
 package main
 
 import (
-	"aoc2019"
+	"aoc2019/solution/day1"
 	"bufio"
 	"fmt"
 	"os"
@@ -28,6 +28,8 @@ func main() {
 		lines = append(lines, float)
 	}
 
-	fuel := aoc2019.TotalFuel(lines)
-	println("result = " + strconv.FormatInt(int64(fuel), 10))
+	fuel := day1.TotalFuel(lines)
+	fuelRequirement := day1.TotalFuelRequirements(lines)
+	println("mass result = " + strconv.FormatInt(int64(fuel), 10))
+	println("fuel result = " + strconv.FormatInt(int64(fuelRequirement), 10))
 }
